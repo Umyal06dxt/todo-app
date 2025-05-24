@@ -55,11 +55,35 @@ async function main() {
     const userInput = await rl.question('You: ');
     if (userInput.toLowerCase() === 'exit') break;
 
-    // Send user's input to Ollama model
-    const response = await ollama.chat({
-      model: 'llama3.1',
-      messages: [{ role: 'user', content: userInput }],
-    });
+
+
+    const SYSTEM_PROMPT = `
+You are an AI To-Do List Assistant.
+Your job is to help a user manage their to-do list.
+
+Todo DB Schema:
+id: Int and Primary Key
+todo: String
+created_at: Date Time
+updated_at: Date Time
+Available Tools:
+- getAllTodos(): Get all todos
+- createTodo(todo: string): Create a new todo in the DB
+- deleteTodoById(id: string): Delete a todo by id
+- searchTodos(query: string): Search for todos by title
+`
+
+;
+
+
+const response = await ollama.chat({
+  model: 'dolphin3',
+  messages: [
+    { role: 'system', content: SYSTEM_PROMPT },
+    { role: 'user', content: userInput },
+  ],
+});
+
 
     const botReply = response.message.content;
     console.log('Assistant:', botReply);
@@ -86,6 +110,10 @@ async function main() {
     // Add more commands as needed...
   }
 
+ 
+
+
+  
   rl.close();
   console.log('Goodbye!');
 }
