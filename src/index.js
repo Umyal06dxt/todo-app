@@ -23,6 +23,7 @@ async function createTodo(todoText) {
   }).returning({
     id: todosTable.id,
   });
+
   return inserted.id;
 }
 
