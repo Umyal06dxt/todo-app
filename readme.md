@@ -1,6 +1,3 @@
-Sure! Here's a complete `README.md` in code block format for your AI-powered Todo App:
-
-````markdown
 # 🧠 AI-Powered Todo Assistant
 
 A conversational command-line Todo app powered by Ollama (Dolphin3 model) and Drizzle ORM. This assistant understands natural language to manage todos—create, search, update, or delete—through a smooth and interactive interface.
@@ -108,11 +105,4 @@ DATABASE_URL=your-database-path.sqlite
 
 ## 🧑‍💻 Author
 
-Made with ❤️ by \[Your Name]
-
-Feel free to fork, contribute, or drop feedback!
-
-```
-
-Let me know if you'd like the badge version, license, or contribution guidelines added as well!
-```
+Made with ❤️ by Umyal Dixit
