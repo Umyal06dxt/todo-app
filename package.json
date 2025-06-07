@@ -2,6 +2,9 @@
   "name": "todo-app",
   "version": "1.0.0",
   "main": "drizzle.config.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
   "dependencies": {
     "buffer-from": "^1.1.2",
     "debug": "^4.4.1",
@@ -36,9 +39,6 @@
     "undici-types": "^6.21.0",
     "whatwg-fetch": "^3.6.20",
     "xtend": "^4.0.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
